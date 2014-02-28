@@ -1,0 +1,16 @@
+//系统用户列表模型
+Ext.define('power.model.security.UserModel',{
+	extend:'Ext.data.Model',
+	fields:[
+			{name:'userId',type:'string',mapping:'userId'},
+			{name:'userName',type:'string',mapping:'userName'},
+			{name:'password',type:'string',mapping:'password'},
+			{name:'userBirthDay',type:'string',mapping:'userBirthDay'},
+			{name:'userEmail',type:'string',mapping:'userEmail'},
+			{name:'userPhone',type:'string',mapping:'userPhone'},
+			{name:'status',type:'string',mapping:'status'},
+			{name:'remark',type:'string',mapping:'remark'},
+			{name:'userOrder',type:'string',mapping:'userOrder'}
+        ],
+   belongsTo:'power.model.security.OrgModel'
+});

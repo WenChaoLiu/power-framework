@@ -1,0 +1,49 @@
+.add {
+    background-image: url(../images/add.png ) !important;
+}
+
+.edit {
+    background-image: url(../images/application_edit.png ) !important;
+}
+
+.del {
+    background-image: url(../images/delete.png ) !important;
+}
+
+.save {
+    background-image: url(../images/script_save.png ) !important;
+}
+.group_add {
+    background-image: url(../images/group_add.png ) !important;
+}
+.key{
+	background-image: url(../images/key.png ) !important;
+}
+.reset {
+    background-image: url(../images/arrow_redo.png ) !important;
+}
+
+.find {
+    background-image: url(../images/find.png ) !important;
+}
+
+.up {
+	background-image: url(../images/up.png) !important;
+}
+
+.export {
+	background-image: url(../images/export.png ) !important;
+}
+
+.logout {
+	background-image: url(../images/logout.png ) !important;
+}
+
+.expand {
+	background-image: url(../images/expand.png ) !important;
+}
+
+.typeBtn {
+	background-color: #FF0000;
+	background-image: url(../images/export.png ) !important;
+}

@@ -1,0 +1,4 @@
+.iconlist{ width:400px;padding:10px;}
+.iconlist li{ border:1px solid #FFFFFF; float:left; display:block; padding:2px; cursor:pointer; }
+.iconlist li.over{border:1px solid #516B9F;}
+.iconlist li img{ height:16px; height:16px;} 

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd" [
+<!ENTITY contextInclude SYSTEM "org/springframework/web/context/WEB-INF/contextInclude.xml">
+]>
+
+<beans>
+	<bean id="baseDao" class="com.power.common.db.BaseDAOImpl">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	
+	<!-- 用户管理start -->
+	<bean id="userDao" class="com.power.core.security.dao.impl.UserDao">
+		<property name="baseDao" ref="baseDao"></property>
+	</bean>
+	
+	<bean id="userManagerBase" class="com.power.core.security.service.impl.UserManager">
+		<property name="userDao" ref="userDao"></property>
+	</bean>
+	
+	<bean id="userManager" parent="transactionBese">
+		<property name="target" ref="userManagerBase"></property>
+	</bean>
+	<!-- 用户管理end -->
+	
+	<!-- 菜单管理start -->
+	<bean id="menuDao" class="com.power.core.security.dao.impl.MenuDao">
+		<property name="baseDao" ref="baseDao"></property>
+	</bean>
+	
+	<bean id="menuManagerBase" class="com.power.core.security.service.impl.MenuManager">
+		<property name="menuDao" ref="menuDao"></property>
+	</bean>
+	
+	<bean id="menuManager" parent="transactionBese">
+		<property name="target" ref="menuManagerBase"></property>
+	</bean>
+	<!-- 菜单管理end -->
+	
+	<!-- 组织机构管理 start-->
+	<bean id="orgDao" class="com.power.core.security.dao.impl.OrgDao">
+		<property name="baseDao" ref="baseDao"></property>
+	</bean>
+	
+	<bean id="orgManagerBase" class="com.power.core.security.service.impl.OrgManager">
+		<property name="orgDao" ref="orgDao"></property>
+	</bean>
+	
+	<bean id="orgManager" parent="transactionBese">
+		<property name="target" ref="orgManagerBase"></property>
+	</bean>
+	<!-- 组织机构管理 end -->
+	
+</beans>
